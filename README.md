@@ -1,1 +1,1 @@
-# react-students
+# Dynamic Resume
