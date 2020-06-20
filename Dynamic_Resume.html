@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<div ng-app data-ng-init="name">
+  <div class="col1">
+    <h1>Resume</h1><br>
+  
+    <h3>Basic Information</h3>
+    <input type="text" ng-model="yourName" data-ng-bind="name" placeholder="Name" class="floatlabel">
+    <input type="text" ng-model="city" placeholder="City" class="floatlabel">
+    <input type="text" ng-model="state" placeholder="State" class="floatlabel">
+    <input type="text" ng-model="phoneNumber" placeholder="Phone Number" class="floatlabel">
+    <input type="text" ng-model="emailAddress" placeholder="Email Address" class="floatlabel">    
+    <h3>Objective</h3>
+    <textarea ng-model="objective" placeholder="Career Objective" class="floatlabel"> </textarea>
+    <h3>Education</h3>
+    <textarea ng-model="education" data-ng-bind="Education" placeholder="Educational Qualifications(from Recent to past)" class="floatlabel"></textarea>
+    <h3>Skills</h3>
+    <input type="text" ng-model="skill" data-ng-bind="Skills" placeholder="Skills" class="floatlabel">
+    <h3>Interests</h3>
+    <textarea ng-model="interest" data-ng-bind="Interest" placeholder="Interests" class="floatlabel"></textarea>
+    <h3>Work Information(optional)</h3>
+    <input type="text" ng-model="employer" placeholder="Employer" class="floatlabel">
+    <input type="text" ng-model="location" placeholder="Location" class="floatlabel">
+    <input type="text" ng-model="time" placeholder="Time" class="floatlabel">
+    <input type="text" ng-model="shortDescription" placeholder="Short Description" class="floatlabel">
+    <input type="text" ng-model="jobTitle" placeholder="Job Title" class="floatlabel">
+    
+  </div>
+  <script type="text/javascript" src="js/dynamic.js"></script>
+  <div class="col2">
+    <h1 style="text-align: center; text-decoration:underline;">MyResume</h1>
+    <h1>{{yourName}}</h1>
+    <p> {{city}}, {{state}}</p>
+    <p>{{phoneNumber}}</p>
+    <p><a href="mailto:{{emailAddress}}">{{emailAddress}}</a></p>
+    <hr />
+    <h2>Objective</h2>
+    <div>{{objective}}</div>
+    <hr />
+    <h2>Education</h2>
+    <p>{{education}}</p>
+    <hr />
+    <h2>Skills</h2>
+    <p>{{skill}}</p>
+    <hr />
+    <h2>Interests</h2>
+    <p>{{interest}}</p>
+    <hr />
+    <h2>Work History</h2>
+    <p>{{employer}}</p>
+    <p>{{location}}</p>
+    <p>{{time}}</p>
+    <p>{{shortDescription}}</p>
+    <p>{{jobTitle}}</p>
+    <hr />
+  </div>
+</div><br>
+</body>
+</html>
